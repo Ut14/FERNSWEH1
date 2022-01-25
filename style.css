@@ -1,0 +1,229 @@
+*{
+MARGIN:0;
+PADDING:0;
+font-family: sans-serif;
+
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.582),rgba(0, 0, 0, 0.575)),url(photo6.jpg);
+    background-size: cover;
+    background-position: center ;
+}
+.page2{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.582),rgba(0, 0, 0, 0.575)), url(PHOTO1.jpg);
+    background-size: cover;   
+    background-position: center;
+    }
+.page3{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.582),rgba(0, 0, 0, 0.575)), url(background3.JPG);
+    background-size: cover;
+    background-position: center;
+    
+}
+.logo{
+    margin-left: 50px;
+    width: 7%;
+    cursor: pointer;
+}
+.navbar{
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.712);
+    width: 100%;
+    margin:auto;
+    padding: 2px 0;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 4px;
+    position: fixed;
+}
+
+.navbar ul li{
+    list-style:none ;
+    display: inline-block;
+    margin:0 5px;
+    position: relative;
+}
+.navbar ul li a{
+margin-right: 70px;
+text-decoration:none;
+font-style: oblique;
+font-weight: bold;
+color:rgba(40, 171, 231, 0.815);
+text-transform:uppercase;
+}
+
+.navbar ul li::after{
+    content:'';
+    height: 2px;
+    width: 0%;
+    background: #d60597ce; 
+    position:absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.7s;
+    
+}
+.navbar ul li:hover:after{
+    width: 70%;
+    
+}
+.CONTENT{
+    background-color:rgba(43, 39, 39, 0.356);
+    padding-top: 50px;
+    padding-bottom:50px ;
+    width: 100%;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50);
+    text-align: center;
+    color: rgb(46, 177, 238);
+}
+.CONTENT h1{
+    font: 70px;
+    font-weight: bolder;
+    font-style:oblique;
+    color:rgba(245, 41, 177, 0.788) ;
+}
+.content p {
+    text-transform:uppercase;
+    font-size: 18px ;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+   
+}
+.CONTENT2{
+    background-color:rgba(197, 195, 195, 0.61);
+    padding-top: 30px;
+    padding-bottom:20px ;
+    width: 20%;
+    height: 45%;
+    position: relative;
+    top: 50%;
+    border-radius: 12px;
+    transform: translateY(-50);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-left: 10%;
+}
+.CONTENT2 ul li{
+    list-style:none ;
+    display: flex;
+    margin: 0 5px;
+    position: relative;
+}
+.CONTENT2 ul li a{
+    margin-left: 15%;
+    margin-top: 12px;
+    margin-bottom:6px;
+    text-decoration:none;
+    font-style: oblique;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+    text-transform:uppercase;
+}
+.CONTENT2 ul li::after{
+    margin-left: 15%;
+    content:'';
+    height: 4px;
+    width: 0%;
+    background: #d60597ce; 
+    position:absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.7s;
+    
+}
+.CONTENT2 ul li:hover:after{
+    width: 30%;
+    
+}
+.CONTENT2 H2{
+    color:rgb(0, 217, 255) ;
+}
+button{
+    z-index: 1;
+    width: 150px;
+    padding: 12px ;
+    text-align: center;
+    margin: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #535052ce;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.button{
+    background-color:transparent;
+    text-align: end;
+    
+    
+}
+.button2{
+    background-color: rgb(24, 23, 23);
+    text-align: center;
+}
+
+span{
+    background: rgba(9, 204, 230, 0.836);
+    height: 100%;
+    width: 0%;
+    left: 0%;
+    bottom: 0;
+    border-radius: 25px;
+    position: absolute;
+    z-index: -1;
+    transition: 0.5s;
+}
+BUTTON:hover span{
+    width: 100%;
+}
+button :hover{
+    border: none;
+}
+.CONTAINER{
+    width: 25%;
+    border-color: rgb(0, 0, 0);
+    margin-left: 35%;
+    background: rgb(255, 255, 255);
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+
+    
+}
+
+.CONTAINER input{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .8s;
+
+}
+.CONTAINER:hover input{
+    width: 350px; 
+
+}
+.CONTAINER li .fas{
+    color:rgb(0, 255, 229);
+}
+.para{
+    color: rgba(9, 204, 230, 0.836);
+}
