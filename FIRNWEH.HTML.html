@@ -1,74 +1,121 @@
-<htm>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Text & Date Proposal with Cute Cat</title>
+    <style>
+        body {
+            background-color: pink;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
 
-    <head>
-        <title>FERNWEH</title>
-        <LINK rel="stylesheet" href="style.css">
-    </head>
+        @keyframes moveAndBounce {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(100%, -100%);
+            }
+            50% {
+                transform: translate(200%, 0);
+            }
+            75% {
+                transform: translate(100%, 100%);
+            }
+        }
 
-    <BODY>
+        .moving-text {
+            font-size: 24px;
+            white-space: nowrap;
+            animation: moveAndBounce 4s linear infinite;
+        }
 
-        <div class="banner">
-            <div class="navbar">
+        .cute-cat {
+            width: 150px;
+            height: 150px;
+            background-image: url('path/to/your/cute-cat-image.jpg');
+            background-size: cover;
+            animation: spin 4s linear infinite;
+            position: absolute;
+        }
 
-                <img src="LOGO.png" class="logo">
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-                <ul>
-                    <li><a href="https://www.thrillophilia.com/cities/manali/tags/treks?search=">MANALI</a></li>
-                    <li><a href="https://www.thrillophilia.com/cities/kasol/tags/treks?search=">KASOL</a></li>
-                    <li><a href="https://www.thrillophilia.com/cities/rishikesh/tags/treks?search=">RISHIKESH</a></li>
-                    <li><a href="https://www.thrillophilia.com/cities/kedarnath/tags/treks?search=best">KEDARNATH</a>
-                    </li>
-                    <li><a href="https://www.thrillophilia.com/cities/himalayas/tags/treks?search=best">HIMALAYAS</a>
-                    </li>
+        .proposal {
+            text-align: center;
+            position: relative;
+        }
 
-                </ul>
-                <div class="button">
-                    <div>
-                        <button type="button"><SPAN></SPAN>LOGIN</button>
-                        <button type="button"><SPAN></SPAN>SIGN UP</button>
-                    </div>
-                </div>
-            </div>
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
 
-            <div class="content">
-                <h1> Fernweh </h1>
-                <br>
-                <P>you have only one life make the most of it</P>
-            </div>
-        </div>
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
 
-        <div class="page2">
-           
-            
-        </div>
-        <div class="page3">
-            <div class="content2">
-                <h2>ABOUT FERNWEH</h2>
-                <ul>
-                    <li><a href=>ABOUT US</a></li>
-                    <li><a href=>WE ARE HIRING</a></li>
-                    <li><a href=>THRILLOPHILIA REVIEWS</a></li>
-                    <li><a href=>TERMS &amp; CONDITIONS</a></li>
-                    <li><a href=>PRIVACY POLICIES</a></li>
-                    <li><a href=>COPYRIGHT POLICIES</a></li>
-                    <li><a href=>SUPPORT</a></li>
-                    <li><span class="onclick-link footer-link" data-href="/apps">APPS</span></li>
-                  </ul>
-            </div> 
+        .error {
+            color: red;
+        }
 
+        /* Media Queries for responsiveness */
+        @media (max-width: 600px) {
+            .moving-text {
+                font-size: 18px;
+            }
 
-        </div>
-        <div class="button2">
-            <div>
-                <button type="button"><SPAN></SPAN>SUBSCRIBE</button>
-                <button type="button"><SPAN></SPAN>CONTACT US</button>
-            </div>
-        </div>
+            .cute-cat {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="proposal">
+        <p class="moving-text">Will you go out with me?</p>
+        <div class="cute-cat"></div>
+        <button onclick="showResult(true)">Yes</button>
+        <button onclick="showResult(false)">No</button>
+        <div id="result"></div>
+    </div>
 
-        
+    <script>
+        function showResult(isAccepted) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = "";
 
-        
-    </BODY>
-
-
-</htm>
+            if (isAccepted) {
+                resultDiv.innerHTML = "Call me!";
+            } else {
+                const errorDiv = document.createElement('div');
+                errorDiv.classList.add('error');
+                errorDiv.innerHTML = "You should be ashamed.";
+                resultDiv.appendChild(errorDiv);
+            }
+        }
+    </script>
+</body>
+</html>
